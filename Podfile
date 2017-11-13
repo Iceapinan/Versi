@@ -10,5 +10,5 @@ target 'Versi' do
   pod 'RxCocoa'
   pod 'Alamofire'
   pod 'AlamofireImage'
-  
+
 end
