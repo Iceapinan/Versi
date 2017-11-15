@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CAC9F126F6CB179BB866FAE3 /* Pods_Versi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E335D964F30E0C69B1B4DB17 /* Pods_Versi.framework */; };
 		F67678A51FB9B4C400085357 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67678A41FB9B4C400085357 /* SearchVC.swift */; };
+		F6826EC61FBC878200CBBEA1 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826EC51FBC878200CBBEA1 /* Repo.swift */; };
+		F6826ECA1FBC8AF300CBBEA1 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */; };
 		F6B7373F1FB83CD20089CB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7373E1FB83CD20089CB33 /* AppDelegate.swift */; };
 		F6B737411FB83CD20089CB33 /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B737401FB83CD20089CB33 /* TrendingFeedVC.swift */; };
 		F6B737441FB83CD20089CB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B737421FB83CD20089CB33 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		B44028785E276C8EE8C0DFF1 /* Pods-Versi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Versi/Pods-Versi.release.xcconfig"; sourceTree = "<group>"; };
 		E335D964F30E0C69B1B4DB17 /* Pods_Versi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67678A41FB9B4C400085357 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = ../../SearchVC.swift; sourceTree = "<group>"; };
+		F6826EC51FBC878200CBBEA1 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		F6B7373B1FB83CD20089CB33 /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B7373E1FB83CD20089CB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6B737401FB83CD20089CB33 /* TrendingFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingFeedVC.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		F6B737501FB83D210089CB33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6826EC51FBC878200CBBEA1 /* Repo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			children = (
 				F6D7D80D1FB9E9DA00D4CA90 /* RoundedBorderButton.swift */,
 				F6D7D80F1FB9EC7400D4CA90 /* RoundedBorderTextField.swift */,
+				F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F67678A51FB9B4C400085357 /* SearchVC.swift in Sources */,
+				F6826ECA1FBC8AF300CBBEA1 /* TrendingRepoCell.swift in Sources */,
 				F6D7D8101FB9EC7400D4CA90 /* RoundedBorderTextField.swift in Sources */,
 				F6B737411FB83CD20089CB33 /* TrendingFeedVC.swift in Sources */,
+				F6826EC61FBC878200CBBEA1 /* Repo.swift in Sources */,
 				F6B7373F1FB83CD20089CB33 /* AppDelegate.swift in Sources */,
 				F6D7D80E1FB9E9DA00D4CA90 /* RoundedBorderButton.swift in Sources */,
 			);
