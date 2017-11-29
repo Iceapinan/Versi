@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TrendingRepoCell: UITableViewCell {
     
@@ -21,12 +23,7 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var viewReadMeButton: RoundedBorderButton!
     
     private var repoURL: String?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
+    let bag = DisposeBag()
     
     func configureCell(repo: Repo) {
         repoImageView.image = repo.image
@@ -36,6 +33,9 @@ class TrendingRepoCell: UITableViewCell {
         languageLabel.text = repo.language
         contributorsLabel.text = String(describing: repo.numberOfContributors)
         repoURL = repo.repoURL
+        viewReadMeButton.rx.tap.subscribe(onNext: {
+            self.window?.rootViewController?.presentSFViewController(from: self.repoURL!)
+        }).disposed(by: bag)
     }
     
     override func layoutSubviews() {
@@ -45,11 +45,4 @@ class TrendingRepoCell: UITableViewCell {
         backView.layer.shadowRadius = 5.0
         backView.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

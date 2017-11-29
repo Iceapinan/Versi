@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CAC9F126F6CB179BB866FAE3 /* Pods_Versi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E335D964F30E0C69B1B4DB17 /* Pods_Versi.framework */; };
-		F67678A51FB9B4C400085357 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67678A41FB9B4C400085357 /* SearchVC.swift */; };
+		F64AADE01FCC705400A00204 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64AADDF1FCC705300A00204 /* SearchVC.swift */; };
 		F6826EC61FBC878200CBBEA1 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826EC51FBC878200CBBEA1 /* Repo.swift */; };
 		F6826ECA1FBC8AF300CBBEA1 /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */; };
 		F6826ECE1FBC96AF00CBBEA1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826ECD1FBC96AF00CBBEA1 /* Constants.swift */; };
 		F6826ED01FBC983500CBBEA1 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6826ECF1FBC983500CBBEA1 /* DownloadService.swift */; };
+		F6AFCDE91FCE801B00B28AF1 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AFCDE81FCE801B00B28AF1 /* SearchCell.swift */; };
 		F6B7373F1FB83CD20089CB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7373E1FB83CD20089CB33 /* AppDelegate.swift */; };
 		F6B737411FB83CD20089CB33 /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B737401FB83CD20089CB33 /* TrendingFeedVC.swift */; };
 		F6B737441FB83CD20089CB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B737421FB83CD20089CB33 /* Main.storyboard */; };
@@ -20,17 +21,19 @@
 		F6B737491FB83CD20089CB33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B737471FB83CD20089CB33 /* LaunchScreen.storyboard */; };
 		F6D7D80E1FB9E9DA00D4CA90 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D7D80D1FB9E9DA00D4CA90 /* RoundedBorderButton.swift */; };
 		F6D7D8101FB9EC7400D4CA90 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D7D80F1FB9EC7400D4CA90 /* RoundedBorderTextField.swift */; };
+		F6E929301FCEDBA900361E5A /* PresentSFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9292F1FCEDBA900361E5A /* PresentSFViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64AECA27B13EA27AEED8DF1E /* Pods-Versi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Versi/Pods-Versi.debug.xcconfig"; sourceTree = "<group>"; };
 		B44028785E276C8EE8C0DFF1 /* Pods-Versi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Versi/Pods-Versi.release.xcconfig"; sourceTree = "<group>"; };
 		E335D964F30E0C69B1B4DB17 /* Pods_Versi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F67678A41FB9B4C400085357 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = ../../SearchVC.swift; sourceTree = "<group>"; };
+		F64AADDF1FCC705300A00204 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		F6826EC51FBC878200CBBEA1 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		F6826ECD1FBC96AF00CBBEA1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6826ECF1FBC983500CBBEA1 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		F6AFCDE81FCE801B00B28AF1 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		F6B7373B1FB83CD20089CB33 /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B7373E1FB83CD20089CB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6B737401FB83CD20089CB33 /* TrendingFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingFeedVC.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		F6B7374A1FB83CD20089CB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D7D80D1FB9E9DA00D4CA90 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		F6D7D80F1FB9EC7400D4CA90 /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
+		F6E9292F1FCEDBA900361E5A /* PresentSFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentSFViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		F6B7373D1FB83CD20089CB33 /* Versi */ = {
 			isa = PBXGroup;
 			children = (
+				F6E9292C1FCED88500361E5A /* Extensions */,
 				F6826ECC1FBC968A00CBBEA1 /* Utilities */,
 				F6826ECB1FBC967D00CBBEA1 /* Services */,
 				F6B737501FB83D210089CB33 /* Model */,
@@ -115,7 +120,6 @@
 				F6B737521FB83D310089CB33 /* Controller */,
 				F6B7373E1FB83CD20089CB33 /* AppDelegate.swift */,
 				F6B737421FB83CD20089CB33 /* Main.storyboard */,
-				F67678A41FB9B4C400085357 /* SearchVC.swift */,
 				F6B737451FB83CD20089CB33 /* Assets.xcassets */,
 				F6B737471FB83CD20089CB33 /* LaunchScreen.storyboard */,
 				F6B7374A1FB83CD20089CB33 /* Info.plist */,
@@ -137,6 +141,7 @@
 				F6D7D80D1FB9E9DA00D4CA90 /* RoundedBorderButton.swift */,
 				F6D7D80F1FB9EC7400D4CA90 /* RoundedBorderTextField.swift */,
 				F6826EC91FBC8AF300CBBEA1 /* TrendingRepoCell.swift */,
+				F6AFCDE81FCE801B00B28AF1 /* SearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,8 +150,17 @@
 			isa = PBXGroup;
 			children = (
 				F6B737401FB83CD20089CB33 /* TrendingFeedVC.swift */,
+				F64AADDF1FCC705300A00204 /* SearchVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6E9292C1FCED88500361E5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6E9292F1FCEDBA900361E5A /* PresentSFViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,12 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F67678A51FB9B4C400085357 /* SearchVC.swift in Sources */,
 				F6826ECA1FBC8AF300CBBEA1 /* TrendingRepoCell.swift in Sources */,
+				F6E929301FCEDBA900361E5A /* PresentSFViewController.swift in Sources */,
+				F6AFCDE91FCE801B00B28AF1 /* SearchCell.swift in Sources */,
 				F6D7D8101FB9EC7400D4CA90 /* RoundedBorderTextField.swift in Sources */,
 				F6B737411FB83CD20089CB33 /* TrendingFeedVC.swift in Sources */,
 				F6826EC61FBC878200CBBEA1 /* Repo.swift in Sources */,
 				F6B7373F1FB83CD20089CB33 /* AppDelegate.swift in Sources */,
+				F64AADE01FCC705400A00204 /* SearchVC.swift in Sources */,
 				F6D7D80E1FB9E9DA00D4CA90 /* RoundedBorderButton.swift in Sources */,
 				F6826ECE1FBC96AF00CBBEA1 /* Constants.swift in Sources */,
 				F6826ED01FBC983500CBBEA1 /* DownloadService.swift in Sources */,

@@ -49,6 +49,7 @@ class DownloadService {
         }
     }
     
+    
     func convertToTrendingReposArray(completion: @escaping (_ reposArray: [Repo]) -> ())
     {
         var repos = [Repo]()

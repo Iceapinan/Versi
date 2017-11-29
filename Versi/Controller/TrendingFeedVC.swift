@@ -7,39 +7,33 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class TrendingFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrendingFeedVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    let datasource = PublishSubject<[Repo]>()
+    let bag = DisposeBag()
+    let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.refreshControl = refreshControl
+        tableView.refreshControl?.tintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Fetching Cool Github Repos !!  😎", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1), NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 16.0)!])
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        fetchData()
+        datasource.bind(to: tableView.rx.items(cellIdentifier: "trendingRepoCell")) { (row, repo: Repo, cell: TrendingRepoCell) in
+            // Set UI
+            cell.configureCell(repo: repo)
+        }.disposed(by: bag)
+    }
+    
+    @objc func fetchData() {
         DownloadService.instance.convertToTrendingReposArray { (repos) in
-            for item in repos {
-                print(item.name)
-            }
+            self.datasource.onNext(repos)
+            self.refreshControl.endRefreshing()
         }
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "trendingRepoCell", for: indexPath) as? TrendingRepoCell else {
-            return UITableViewCell()
-        }
-        let repo = Repo(image: UIImage(named: "searchIconLarge")!, name: "SWIFT", description: "Apple's programming language.", numberOfForks: 356, language: "Swift", numberOfContributors: 1234, repoURL: "www.apple.com")
-        cell.configureCell(repo: repo)
-        return cell
-    }
-
-
 }
 
