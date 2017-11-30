@@ -14,11 +14,14 @@ class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchField: RoundedBorderTextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.isHidden = true
         bindElements()
         tableView.rx.setDelegate(self).disposed(by: bag)
     }
@@ -26,7 +29,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate {
     func bindElements() {
         let searchResultsObservable = searchField.rx.text
             .orEmpty
-            .debounce(0.5, scheduler: MainScheduler.instance)
+            .debounce(1.0, scheduler: MainScheduler.instance)
             .map {
                 $0.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
             }
@@ -34,6 +37,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate {
                 if query == "" {
                     return Observable<[Repo]>.just([])
                 } else {
+                    self.activityIndicator.isHidden = false
+                    self.activityIndicator.startAnimating()
                     let url = searchURL + query + starsDescendingSegment
                     var searchRepos = [Repo]()
                     return URLSession.shared.rx.json(url: URL(string: url)!).map {
@@ -57,6 +62,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITextFieldDelegate {
             }.observeOn(MainScheduler.instance)
         searchResultsObservable.bind(to: tableView.rx.items(cellIdentifier: "searchCell")) { (row, repo: Repo, cell: SearchCell) in
             cell.configureCell(repo: repo)
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }.disposed(by: bag)
     }
     

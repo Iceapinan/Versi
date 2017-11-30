@@ -14,7 +14,7 @@ class DownloadService {
     static let instance = DownloadService()
     func downloadTrendingReposDictArray(completion: @escaping (_ reposDictArray: [Dictionary<String,Any>], _ count: Int) -> ()) {
         var trendingReposArray = [Dictionary<String,Any>]()
-        Alamofire.request(trendingRepoURL).responseJSON { (response) in
+        Alamofire.request(trendingRepoURL + AppDelegate.topic).responseJSON { (response) in
             guard let json = response.result.value as? Dictionary<String,Any> else { return }
             guard let repoDictArray = json["items"] as? [Dictionary<String,Any>] else { return }
             for repoDict in repoDictArray {
@@ -27,9 +27,14 @@ class DownloadService {
                     break
                 }
             }
+            
+            guard (trendingReposArray.count != 0) else {
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFY_WHEN_REPOS_IS_EMPTY), object: nil)
+                return
+            }
             completion(trendingReposArray, trendingReposArray.count)
-            print(trendingReposArray.count)
         }
+        
     }
     
     private func convertToTrendingRepo(dictionary dict: Dictionary<String,Any>, completion: @escaping (_ repo: Repo) -> ()) {

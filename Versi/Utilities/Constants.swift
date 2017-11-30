@@ -10,7 +10,10 @@ import Foundation
 
 // MARK: URLs
 
-let trendingRepoURL = "https://api.github.com/search/repositories?q=Kotlin"
+let trendingRepoURL = "https://api.github.com/search/repositories?q="
 let searchURL = "https://api.github.com/search/repositories?q="
 let starsDescendingSegment = "&sort=stars&order=desc"
 let readmeSegment = "/blob/master/README.md"
+
+let NOTIFY_WHEN_REPOS_IS_EMPTY = "notifyWhenReposIsEmpty"
+
